@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://www.googletagmanager.com; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: https://www.googletagmanager.com https://*.google-analytics.com https://*.analytics.google.com; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://stats.g.doubleclick.net; frame-src https://www.google.com;" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha256-kSnWUrpid2kU1qmzFwu9L/pB625iFcxHj//NHdbAH00=' https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://www.googletagmanager.com; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: https://www.googletagmanager.com https://*.google-analytics.com https://*.analytics.google.com; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://stats.g.doubleclick.net; frame-src https://www.google.com;" />
   <title>Control Garage – Officina Meccatronica a Forlì</title>
   <meta name="description" content="Control Garage – Officina Meccatronica a Forlì. Nata dalla pura passione per le auto, i motori e le elaborazioni. Diagnostica, riparazioni e tuning. Via Ettore Benini 3." />
 
@@ -72,8 +72,8 @@
     },
     "geo": {
       "@type": "GeoCoordinates",
-      "latitude": 44.2227,
-      "longitude": 12.0568
+      "latitude": 44.1967479,
+      "longitude": 12.0126539
     },
     "openingHoursSpecification": [
       {
@@ -507,9 +507,9 @@
             <path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/>
           </svg>
           <p class="map-placeholder-title">Mappa non disponibile</p>
-          <p class="map-placeholder-text">Per visualizzare la mappa interattiva, accetta i cookie funzionali.</p>
+          <p class="map-placeholder-text">Per visualizzare la mappa interattiva, abilita la categoria “Mappa” nelle preferenze cookie.</p>
           <div class="map-placeholder-actions">
-            <button type="button" class="map-placeholder-btn" onclick="window.CookieConsent.show()">Gestisci Cookie</button>
+            <button type="button" class="map-placeholder-btn js-cookie-manage">Gestisci Cookie</button>
             <a href="https://maps.app.goo.gl/kxyLR6czNGk7Mdpu7" target="_blank" rel="noopener noreferrer" class="map-placeholder-link">Apri su Google Maps</a>
           </div>
         </div>
@@ -677,7 +677,7 @@
             <li><a href="#info">Dove Siamo</a></li>
             <li><a href="/privacy-policy.html">Privacy Policy</a></li>
             <li><a href="/cookie-policy.html">Cookie Policy</a></li>
-            <li><button type="button" onclick="window.CookieConsent.show()" class="footer-cookie-btn">Gestisci Cookie</button></li>
+            <li><button type="button" class="footer-cookie-btn js-cookie-manage">Gestisci Cookie</button></li>
           </ul>
         </div>
 
@@ -742,7 +742,7 @@
       <div class="cookie-banner-actions">
         <button type="button" class="cookie-btn cookie-btn--accept" id="cookieAcceptAll">Accetta tutto</button>
         <button type="button" class="cookie-btn cookie-btn--reject" id="cookieRejectAll">Rifiuta tutto</button>
-        <button type="button" class="cookie-btn cookie-btn--customize" id="cookieCustomize">Personalizza</button>
+        <button type="button" class="cookie-btn cookie-btn--customize" id="cookieCustomize" aria-expanded="false" aria-controls="cookieDetails">Personalizza</button>
       </div>
 
       <div class="cookie-banner-details" id="cookieDetails" style="display:none">
