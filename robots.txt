@@ -1,7 +1,4 @@
 User-agent: *
 Allow: /
-Disallow: /admin.html
-Disallow: /privacy-policy.html
-Disallow: /cookie-policy.html
 
 Sitemap: https://controlgarageforli.it/sitemap.xml
