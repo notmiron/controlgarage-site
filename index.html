@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://www.googletagmanager.com https://*.google-analytics.com https://*.analytics.google.com; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://stats.g.doubleclick.net; frame-src https://www.google.com;" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://www.googletagmanager.com; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: https://www.googletagmanager.com https://*.google-analytics.com https://*.analytics.google.com; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://stats.g.doubleclick.net; frame-src https://www.google.com;" />
   <title>Control Garage – Officina Meccatronica a Forlì</title>
   <meta name="description" content="Control Garage – Officina Meccatronica a Forlì. Nata dalla pura passione per le auto, i motori e le elaborazioni. Diagnostica, riparazioni e tuning. Via Ettore Benini 3." />
 
@@ -37,11 +37,10 @@
   <link rel="apple-touch-icon" href="./apple-touch-icon.png" />
   <link rel="manifest" href="./manifest.json" />
 
-  <!-- Web fonts – caricati via JS dopo consenso cookie -->
-
-  <!-- Preconnect to external origins -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <!-- Critical same-origin web fonts -->
+  <link rel="preload" href="./fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="./fonts/bebas-neue-latin.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="./fonts/dancing-script-latin.woff2" as="font" type="font/woff2" crossorigin />
 
   <!-- Preload hero image -->
   <link rel="preload" as="image" href="./hero-bg.webp" type="image/webp" />
@@ -738,7 +737,7 @@
         </svg>
         <h3 class="cookie-banner-title">Questo sito utilizza i cookie</h3>
       </div>
-      <p class="cookie-banner-text">Utilizziamo cookie di terze parti per la tipografia, la mappa e le statistiche anonime di visita. Puoi scegliere quali accettare. Maggiori dettagli nella <a href="/cookie-policy.html" style="color:var(--accent);text-decoration:underline">Cookie Policy</a>.</p>
+      <p class="cookie-banner-text">Utilizziamo servizi di terze parti per la mappa e le statistiche anonime di visita. Puoi scegliere quali accettare. Maggiori dettagli nella <a href="/cookie-policy.html" style="color:var(--accent);text-decoration:underline">Cookie Policy</a>.</p>
 
       <div class="cookie-banner-actions">
         <button type="button" class="cookie-btn cookie-btn--accept" id="cookieAcceptAll">Accetta tutto</button>
@@ -754,16 +753,6 @@
           </div>
           <label class="cookie-toggle cookie-toggle--disabled">
             <input type="checkbox" checked disabled />
-            <span class="cookie-toggle-slider"></span>
-          </label>
-        </div>
-        <div class="cookie-category">
-          <div class="cookie-category-info">
-            <strong>Funzionali</strong>
-            <span class="cookie-category-desc">Caratteri tipografici del sito</span>
-          </div>
-          <label class="cookie-toggle">
-            <input type="checkbox" id="cookieToggleFonts" />
             <span class="cookie-toggle-slider"></span>
           </label>
         </div>
